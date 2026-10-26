@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Three-in-One Web Project</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#263238;line-height:1.65;background:#f5f7fb}
+header{position:sticky;top:0;z-index:10;background:#10233f;color:#fff;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.brand{font-weight:bold;font-size:22px;color:#eac46b}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-size:14px;transition:.25s}
+nav a:hover{color:#eac46b;transform:translateY(-2px)}
+section{padding:55px 6%;scroll-margin-top:80px}
+h1,h2,h3{line-height:1.25}
+h2{text-align:center;font-size:32px;margin-bottom:25px;color:#173c65}
+p{margin:8px 0}
+.hero{min-height:360px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:40px 20px;background:linear-gradient(120deg,#112747,#26717b)}
+.hero h1{font-size:clamp(32px,5vw,50px);margin-bottom:12px}
+.hero p{max-width:720px}
+.btn{display:inline-block;background:#eac46b;color:#10233f;padding:10px 20px;text-decoration:none;border-radius:5px;font-weight:bold;margin-top:12px;transition:.25s}
+.btn:hover{background:#fff;transform:translateY(-3px)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 15px #00000012;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 8px 22px #00000020}
+.card img{width:100%;height:170px;object-fit:cover;display:block}
+.card-content{padding:18px}
+.card h3{color:#147b83;margin-bottom:8px}
+.muted{color:#66717b}
+.alt{background:#eaf2f8}
+.dark{background:#182333;color:#fff}
+.dark h2{color:#eac46b}
+.center{text-align:center}
+.profile-pic{width:105px;height:105px;border-radius:50%;object-fit:cover;border:4px solid #eac46b;margin-bottom:14px}
+.skill{margin:14px auto;max-width:700px;text-align:left}
+.bar{height:10px;border-radius:12px;background:#d5e0e9;overflow:hidden}
+.fill{height:100%;background:#168b8b;animation:grow 1.5s ease}
+.form{max-width:760px;margin:auto;background:#fff;padding:24px;border-radius:10px;box-shadow:0 4px 16px #00000012}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{display:block;font-weight:bold;margin-bottom:5px}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ccd4dd;border-radius:5px;font:inherit}
+.full{grid-column:1/-1}
+button{border:0;cursor:pointer;font:inherit}
+footer{background:#10233f;color:#fff;text-align:center;padding:22px}
+.small{font-size:14px}
+@keyframes grow{from{width:0}}
+@keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.animate{animation:fade .8s ease}
+@media(max-width:800px){header{justify-content:center;text-align:center}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.grid,.formgrid{grid-template-columns:1fr}.full{grid-column:auto}section{padding:40px 5%}h2{font-size:27px}nav{justify-content:center}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Three-in-One Web Project</div>
+  <nav aria-label="Main navigation">
+    <a href="#restaurant">Restaurant</a><a href="#portfolio">Portfolio</a><a href="#college">College</a>
+    <a href="#reservation">Reservation</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- WEBSITE 1: RESTAURANT -->
+<section class="hero" id="restaurant">
+  <h1>The Royal Feast</h1>
+  <p>Wonderful food, beautiful moments, unforgettable memories.</p>
+  <p>Explore our menu, meet our chefs and reserve a table.</p>
+  <a class="btn" href="#reservation">Book a Table</a>
+</section>
+<section>
+  <h2>Restaurant Specials</h2>
+  <div class="grid">
+    <article class="card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" alt="Pizza"><div class="card-content"><h3>Classic Pizza</h3><p>Cheese, fresh vegetables and Italian herbs.</p><b>₹299</b></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=80" alt="Rice dish"><div class="card-content"><h3>Special Biryani</h3><p>Aromatic rice cooked with royal spices.</p><b>₹349</b></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Burger"><div class="card-content"><h3>Royal Burger</h3><p>Juicy burger with fresh vegetables and sauce.</p><b>₹199</b></div></article>
+  </div>
+</section>
+<section class="alt">
+  <h2>Our Chefs & Ambience</h2>
+  <div class="grid">
+    <article class="card"><img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=700&q=80" alt="Chef"><div class="card-content"><h3>Chef Arjun</h3><p>Head chef — Indian cuisine.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Restaurant interior"><div class="card-content"><h3>Elegant Dining</h3><p>Comfort, style and warm hospitality.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt="Dining table"><div class="card-content"><h3>Guest Experience</h3><p>Great food for family and friends.</p></div></article>
+  </div>
+</section>
+<section id="reservation">
+  <h2>Reserve Your Table</h2>
+  <form class="form" action="#" method="post">
+    <div class="formgrid">
+      <div><label for="rname">Full name</label><input id="rname" name="name" required placeholder="Your name"></div>
+      <div><label for="remail">Email</label><input id="remail" type="email" name="email" required placeholder="you@example.com"></div>
+      <div><label for="rphone">Phone</label><input id="rphone" type="tel" name="phone" pattern="[0-9]{10}" required placeholder="10-digit number"></div>
+      <div><label for="guests">Guests</label><select id="guests" name="guests" required><option value="">Select guests</option><option>1–2</option><option>3–4</option><option>5–6</option><option>7+</option></select></div>
+      <div><label for="rdate">Date</label><input id="rdate" type="date" name="date" required></div>
+      <div><label for="rtime">Time</label><select id="rtime" name="time" required><option value="">Select time</option><option>12:00 PM</option><option>2:00 PM</option><option>6:00 PM</option><option>8:00 PM</option></select></div>
+      <div class="full"><label for="request">Special request</label><textarea id="request" rows="3" name="request" placeholder="Any special requests?"></textarea></div>
+    </div>
+    <button class="btn" type="submit">Submit Reservation</button>
+    <p class="small muted">Demo form only: connect a backend to receive actual bookings.</p>
+  </form>
+</section>
+<section class="dark center">
+  <h2>Guest Testimonials</h2><p>★★★★★ “Amazing food and a beautiful atmosphere!” — Ravi</p><p>★★★★★ “A lovely place for family dinners.” — Sneha</p>
+  <p>Opening hours: Mon–Fri 11 AM–10 PM | Sat–Sun 11 AM–11 PM</p><p>Sample location: MG Road, Vijayawada, Andhra Pradesh</p>
+</section>
+
+<!-- WEBSITE 2: PERSONAL PORTFOLIO -->
+<section class="hero" id="portfolio">
+  <img class="profile-pic" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Profile placeholder">
+  <h1>My Personal Portfolio</h1><p>Your Name | First-Year B.Tech Computer Science Student</p>
+  <p>Interested in programming, web development and Artificial Intelligence.</p>
+  <a class="btn" href="#portfolio-projects">View My Projects</a>
+</section>
+<section>
+  <h2>About Me & Education</h2>
+  <div class="grid">
+    <article class="card"><div class="card-content"><h3>Profile</h3><p>I enjoy learning technology, solving problems and building useful projects.</p></div></article>
+    <article class="card"><div class="card-content"><h3>B.Tech</h3><p>Computer Science Engineering — 2026–Present</p><p>College: Your College Name</p></div></article>
+    <article class="card"><div class="card-content"><h3>Previous Education</h3><p>Intermediate and SSC — replace with your schools, years and results.</p></div></article>
+  </div>
+</section>
+<section class="alt">
+  <h2>Technical Skills</h2>
+  <div class="skill"><p>HTML</p><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+  <div class="skill"><p>CSS</p><div class="bar"><div class="fill" style="width:65%"></div></div></div>
+  <div class="skill"><p>Python</p><div class="bar"><div class="fill" style="width:55%"></div></div></div>
+</section>
+<section id="portfolio-projects">
+  <h2>Projects, Hobbies & Achievements</h2>
+  <div class="grid">
+    <article class="card"><div class="card-content"><h3>Family Tree Website</h3><p>A webpage showing family relationships across generations.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Restaurant Website</h3><p>A menu and reservation page built with HTML and CSS.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Hobbies & Goals</h3><p>Coding, reading, music and learning new technologies. Add your real achievements here.</p></div></article>
+  </div>
+</section>
+<section class="alt center">
+  <h2>Resume</h2><p>Place your PDF resume beside this HTML file and name it <b>resume.pdf</b>.</p><a class="btn" href="resume.pdf" download>Download Resume</a>
+</section>
+
+<!-- WEBSITE 3: COLLEGE -->
+<section class="hero" id="college">
+  <h1>ABC Engineering College</h1><p>Learn Today, Lead Tomorrow</p><p>Quality Education · Innovation · Excellence</p>
+  <a class="btn" href="#admissions">Explore Admissions</a>
+</section>
+<section>
+  <h2>About Our Institution</h2><p class="center">ABC Engineering College is a sample institution focused on academic excellence, practical learning, creativity and professional skills.</p>
+</section>
+<section class="alt">
+  <h2>Departments & Courses</h2>
+  <div class="grid">
+    <article class="card"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80" alt="Computer technology"><div class="card-content"><h3>Computer Science</h3><p>B.Tech — programming, software, AI and computing.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=700&q=80" alt="Electronics engineering"><div class="card-content"><h3>Electronics</h3><p>B.Tech — circuits, communication and embedded systems.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=700&q=80" alt="Engineering laboratory"><div class="card-content"><h3>Mechanical</h3><p>B.Tech — design, machines and manufacturing.</p></div></article>
+  </div>
+</section>
+<section>
+  <h2>Faculty Profiles</h2>
+  <div class="grid">
+    <article class="card"><div class="card-content"><h3>Dr. Anil Kumar</h3><p>Professor — Computer Science and AI.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Dr. Priya Sharma</h3><p>Associate Professor — Electronics.</p></div></article>
+    <article class="card"><div class="card-content"><h3>Prof. Rahul Verma</h3><p>Assistant Professor — Mechanical Engineering.</p></div></article>
+  </div>
+  <p class="small muted center">Faculty names are placeholders for this demonstration.</p>
+</section>
+<section class="dark" id="admissions">
+  <h2>Admissions Procedure</h2>
+  <p>1. Check course eligibility and entrance requirements.</p>
+  <p>2. Complete the relevant application or entrance process.</p>
+  <p>3. Submit required documents for verification.</p>
+  <p>4. Follow the institution's official instructions for fees and confirmation.</p>
+</section>
+<section class="alt">
+  <h2>Campus Facilities & Events</h2>
+  <div class="grid">
+    <article class="card"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=700&q=80" alt="Library"><div class="card-content"><h3>Library</h3><p>Books, reference resources and study spaces.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80" alt="Laboratory"><div class="card-content"><h3>Laboratories</h3><p>Practical learning and experimentation.</p></div></article>
+    <article class="card"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&q=80" alt="Campus students"><div class="card-content"><h3>Events</h3><p>Technical symposiums, cultural festivals and sports meets.</p></div></article>
+  </div>
+</section>
+<section id="contact">
+  <h2>Contact Information</h2>
+  <div class="grid">
+    <article class="card"><div class="card-content"><h3>Location</h3><p>Vijayawada, Andhra Pradesh, India (sample)</p></div></article>
+    <article class="card"><div class="card-content"><h3>Phone</h3><p>+91 XXXXX XXXXX — replace with official number</p></div></article>
+    <article class="card"><div class="card-content"><h3>Email</h3><p>info@example.com — replace with official email</p></div></article>
+  </div>
+</section>
+<footer><p>© 2026 Three-in-One Web Project</p><p class="small">Restaurant · Personal Portfolio · College Website</p></footer>
+</body>
+</html>
